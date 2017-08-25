@@ -566,20 +566,20 @@
 <!--flexslider-->
 <script>
     // Can also be used with $(document).ready()
-   jQuery(document).redy() {
-	jQuery('.flexslider').flexslider({
-	    animation: "slide"
-	    });
-	jQuery('.flexslider-2').flexslider({
-	    animation: "slide"
-	    });
-	jQuery('.flexslider-3').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 200,
-    itemMargin: 20,
-      });
-});
+	jQuery(window).load(function() {
+		jQuery('.flexslider').flexslider({
+		    animation: "slide"
+		    });
+		jQuery('.flexslider-2').flexslider({
+		    animation: "slide"
+		    });
+		jQuery('.flexslider-3').flexslider({
+	    animation: "slide",
+	    animationLoop: false,
+	    itemWidth: 200,
+	    itemMargin: 20,
+	      });
+	});
 </script>
 </body>
 
