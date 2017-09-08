@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/reseter.css" type="text/css"/>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
+<link rel="stylesheet" href="css/demo.css" type="text/css"/>
 <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 <!-- Modernizr -->
 <script src="js/modernizr.js"></script>
@@ -14,6 +15,8 @@
 <script src="js/jquery.min.js"></script>
 <!-- FlexSlider -->
 <script defer src="js/jquery.flexslider.js"></script>
+<!-- Accordion Mobile -->
+<script type="text/javascript" src="js/accordion.js"></script>
 <!-- Tipografía -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 </head>
@@ -25,7 +28,8 @@
 
 	<!--huincha promoción-->
 	<div class="huincha-promo">
-		<img src="./images/home_31ago17.png">
+		<img id ="desktop-huincha" src="./images/home_31ago17.png">
+		<img id ="mobile-huincha" src="./images/home_31ago17_mob.png">
 	</div>
 	<!--fin huincha promoción-->
 
@@ -33,13 +37,67 @@
 	<div class="accesos-header clearfix">
 		<ul class="clearfix">
 			<li><a href="#"><div class="svg_tiendas"></div>Tiendas</a></li>
-			<li><a href="#"><div class="svg_ayuda"></div>Ayuda</a></li>
+			<li><a href="#"><div class="svg_entrega"></div>Estado de entrega</a></li>
+			<li><a href="#"><div class="svg_chat"></div>Chat online</a></li>
+			<li><a href="#" class="hola"><div class="svg_ayuda"></div>Ayuda</a></li>
 			<li><a href="#"><div class="svg_puntos"></div>Puntos</a></li>
 			<li><a href="#"><div class="svg_tarjeta"></div>Tarjeta Cencosud</a></li>
-			<li><a href="#"><div class="svg_entrega"></div>Estado de entrega</a></li>
 			<li><a href="#"><div class="svg_callcenter"></div>Servicio al cliente 600 700 5000</a></li>
 		</ul>
 	</div><!--fin accesos-->
+
+	<!-- inicio ayuda_tool -->
+			<div id="ayuda_tool" class="adios">
+			  <!-- inicio ayuda_element1 -->
+			  <div class="ayuda_element">
+			    <a href="mailto:contacto@johnson.cl" target="_self">
+			      <img src="./images/header/contact_ico.gif" border="0">
+			      <span class="ayuda-titulo">Contáctanos</span>
+			      <span class="ayuda-bajada">Escríbenos aquí</span>
+			    </a>
+			  </div>
+			  <!-- FIN ayuda_element1 -->
+			<!-- inicio ayuda_element1B -->
+			<div class="ayuda_element"><a href="javascript:openChat();" target="_self">
+			  <img data-feo-orig-src="./images/header/chat.gif" class="ayuda-flota" src="./images/header/chat.gif" alt="" title=""  border="0"><script blzsys="1" type="text/javascript">aFeoOverrideAttrRead("img", "src")</script>
+			<span class="ayuda-titulo">Chat On Line</span>
+			<span class="ayuda-bajada">Resuelve tus dudas y asesora tus compras en Johnson.cl</span></a></div>
+			<!-- FIN ayuda_element1B -->
+			<!-- inicio ayuda_element2 -->
+			<div class="ayuda_element">
+			  <a href="#" target="_parent">
+			  <img src="./images/header/llama_ico.gif" border="0">
+			  <span class="ayuda-titulo">Llámanos</span>
+			  <span class="ayuda-bajada">Usa nuestro servicio telefónico<br>Llámanos al <strong>600 700 5000</strong></span></div>
+			  <!-- FIN ayuda_element2 -->
+			  <!-- inicio ayuda_element4 -->
+			  <div class="ayuda_element">
+			    <a href="#" target="_parent">
+			      <img src="./images/header/dev_ico.gif" border="0">
+			      <span class="ayuda-titulo">Dudas sobre devoluciones</span>
+			      <span class="ayuda-bajada">Dudas sobre devoluciones aquí</span></a>
+			    </div>
+			    <!-- FIN ayuda_element4 -->
+			    <!-- inicio ayuda_element5 -->
+			    <div class="ayuda_element">
+			      <a href="#" target="_parent">
+			        <img src="./images/header/pin_ico.gif" border="0">
+			        <span class="ayuda-titulo">Nuestras tiendas</span>
+			        <span class="ayuda-bajada">Información de nuestras tiendas aquí</span></a>
+			      </div>
+			      <!-- FIN ayuda_elemen5 -->
+			      <!-- inicio ayuda_elemen6 -->
+			      <div class="ayuda_element">
+			        <a href="#" target="_parent">
+			          <img src="./images/header/facs_ico.gif" border="0">
+								<div class="centrar">
+				          <span class="ayuda-titulo">Preguntas frecuentes</span>
+				          <span class="ayuda-bajada">Las respuestas a las preguntas más frecuentes están aquí</span>
+								</div>
+							</a>
+						</div><!-- FIN ayuda_elemen6 -->
+					</div><!-- FIN ayuda_tool -->
+
 
 	<!--Header fijo--->
 	<div id="header-fijo">
@@ -292,6 +350,8 @@
 
 <footer>
 		<div class="contenedor-fin">
+
+			<!--Footer Desktop-->
 			<div class="items-fin">
 			<div class="sec-footer">
 				<ul>
@@ -346,6 +406,77 @@
 			</div>
 
 	</div><!--fin items-fin-->
+	<!--Fin Footer Desktop-->
+
+	<!--Inicio Accordion-->
+	<div class="accordion">
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-1">Servicio al Cliente</a>
+					<div id="accordion-1" class="accordion-section-content">
+						<ul>
+								<li><a href="#">Beneficios Johnson.cl</a></li>
+								<li><a href="#">Términos y Condiciones</a></li>
+								<li><a href="#">Políticas de Privacidad</a></li>
+								<li><a href="#">Recupera tu Boleta</a></li>
+								<li><a href="#">Encuesta de opinión</a></li>
+							</ul>
+						</div><!--end .accordion-section-content-->
+				</div><!--end .accordion-section-->
+
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-2">¿Necesitas ayuda?</a>
+					<div id="accordion-2" class="accordion-section-content">
+						<ul>
+								<li><a href="#">Devoluciones y Cambios</a></li>
+								<li><a href="#">Despacho</a></li>
+								<li><a href="#">Garantía Extendida</a></li>
+								<li><a href="#">Medios de Pago</a></li>
+							</ul>
+						</div>
+				</div><!--end .accordion-section-->
+
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-3">Cencosud</a>
+					<div id="accordion-3" class="accordion-section-content">
+						<ul>
+								<li><a href="#">Puntos Cencosud</a></li>
+								<li><a href="#">Tarjeta Cencosud</a></li>
+								<li><a href="#">Seguros Cencosud</a></li>
+								<li><a href="#">Venta Empresas</a></li>
+							</ul>
+						</div><!--end .accordion-section-content-->
+				</div><!--end .accordion-section-->
+
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-4">Nuestros Sitios</a>
+					<div id="accordion-4" class="accordion-section-content">
+						<ul>
+								<li><a href="#">Easy</a></li>
+								<li><a href="#">Jumbo</a></li>
+								<li><a href="#">Paris</a></li>
+								<li><a href="#">Santa Isabel</a></li>
+								<li><a href="#">Umbrale</a></li>
+							</ul>
+						</div><!--end .accordion-section-content-->
+				</div><!--end .accordion-section-->
+
+				<div class="accordion-section">
+					<a class="accordion-section-title" href="#accordion-5">Contáctanos</a>
+					<div id="accordion-5" class="accordion-section-content">
+						<ul>
+							<li><a href="#">600 700 5000</a></li>
+							<li><a href="#">Tiendas Johnson</a></li>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="#">Trabaja en Johnson</a></li>
+						</ul>
+					</div><!--end .accordion-section-content-->
+				</div><!--end .accordion-section-->
+
+
+			</div><!--end .accordion-->
+
+
+	<!--fin Accordion-->
 
 	<div class="derechos">
 			<p> © 2017 JOHNSON. Todos los derechos reservados. </p>
@@ -356,11 +487,18 @@
 				<a class="svg_instagram" href="https://www.instagram.com/johnson_tiendas/">Instagram</a>
 				<a class="svg_youtube" href="https://www.youtube.com/user/tiendasjohnson">Youtube</a>
 		</div>
-
-	</div>
+</div>
 	</div><!--fin contenedor-fin-->
 
 </footer>
+
+
+<!--desplegable ayuda-->
+<script>
+	$( ".hola" ).click(function() {
+	$( ".adios" ).toggle("");
+	});
+</script>
 
 <!--flexslider-->
 <script>
